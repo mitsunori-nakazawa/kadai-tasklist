@@ -6,8 +6,8 @@ class TasksController < ApplicationController
     @tasks=current_user.tasks.order(id: :desc).page(params[:page])
   end
 
-  # def show
-  # end
+  def show
+  end
 
   def new
     @task=current_user.tasks.build
@@ -25,8 +25,8 @@ class TasksController < ApplicationController
     end
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
   def update
     @task = Task.find(params[:id])
